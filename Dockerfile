@@ -31,7 +31,7 @@ RUN php -r "unlink('composer-setup.php');"
 RUN composer global require overtrue/phplint
 RUN composer global require squizlabs/php_codesniffer
 
-RUN export PATH=/root/.composer/vendor/bin:$PATH
+ENV PATH "$PATH:/root/.composer/vendor/bin"
 
 RUN yum install -y svn
 
