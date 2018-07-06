@@ -28,10 +28,10 @@ RUN php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60e
 RUN php composer-setup.php --install-dir=/usr/bin --filename=composer
 RUN php -r "unlink('composer-setup.php');"
 
-composer global require overtrue/phplint
-composer global require squizlabs/php_codesniffer
+RUN composer global require overtrue/phplint
+RUN composer global require squizlabs/php_codesniffer
 
-export PATH=~/.composer/vendor/bin:$PATH
+RUN export PATH=~/.composer/vendor/bin:$PATH
 
 RUN yum install -y svn
 
