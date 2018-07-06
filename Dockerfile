@@ -2,7 +2,7 @@ FROM centos:6
 
 USER root
 
-RUN yum update
+RUN yum update -y
 RUN yum install -y wget
 
 RUN yum install -y epel-release
