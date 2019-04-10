@@ -28,6 +28,6 @@ RUN php -r "if (hash_file('sha384', 'composer-setup.php') === '48e3236262b34d309
 RUN php composer-setup.php --install-dir=/usr/bin --filename=composer
 RUN php -r "unlink('composer-setup.php');"
 
-RUN yum install -y svn
+RUN yum install -y svn sshpass
 
 RUN yum clean all
